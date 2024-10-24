@@ -1,0 +1,34 @@
+<div class="col-md-8 game-content">
+  <div *ngIf="clickAbout">
+    <button (click)="hideAbout()" class="btn back-button">
+      <i class="bi bi-arrow-90deg-left fs-3"></i>
+    </button>
+    <p class="mt-5">
+      Welcome to Color Mastermind, the ultimate color guessing challenge! Test
+      your perception and memory as you attempt to match the correct shades and
+      conquer various difficulty levels. Are you up for the challenge?
+    </p>
+    <p>
+      As a color detective, your objective is simple: uncover the hidden shade
+      within a collection of options. With each difficulty level, the complexity
+      increases, testing your perception and memory skills to their limits.
+    </p>
+    <ul>
+      <li>
+        Easy: Begin your journey with a trio of color options. Can you swiftly
+        identify the correct shade among them?
+      </li>
+      <li>
+        Hard: Brave souls ready for the ultimate trial can take on a whopping
+        six color options. Only the most astute can conquer this formidable
+        level.
+      </li>
+    </ul>
+  </div>
+  <button *ngIf="!clickAbout" (click)="showAbout()" class="btn">
+    <i class="bi bi-info-circle fs-3"></i>
+  </button>
+  <button *ngIf="!clickAbout" (click)="gotoGame()" class="btn start_game">
+    Play game
+  </button>
+</div>

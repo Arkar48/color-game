@@ -1,0 +1,37 @@
+<div
+  class="col-md-8 game-display text-center text-white d-flex justify-content-center align-items-center"
+>
+  <div *ngIf="chooseLevel">
+    <h2 class="mt-5 fs-1">Guess the color!</h2>
+    <p class="fs-4 question">{{ question }}</p>
+    <div class="answerStatus">
+      <p class="fs-3">{{ status }}</p>
+    </div>
+    <div class="d-flex justify-content-center answers gap-4">
+      <div
+        *ngFor="let color of answers"
+        class="color-ans"
+        [style.background-color]="color"
+        (click)="selectAnswer(color, $event)"
+      ></div>
+    </div>
+  </div>
+
+  <div class="level" *ngIf="!chooseLevel">
+    <p class="fs-2 game_level mb-2" (click)="chooseDifficulty('easy')">easy</p>
+    <p class="fs-2 game_level" (click)="chooseDifficulty('hard')">hard</p>
+  </div>
+</div>
+<button class="btn back" (click)="gotohome()">
+  <i class="bi bi-house fs-3"></i>
+</button>
+<button
+  *ngIf="completedGame"
+  class="btn go-choose-level"
+  (click)="gotoChooseLevel()"
+>
+  <i class="bi bi-arrow-90deg-left fs-3"></i>
+</button>
+<button *ngIf="correctanswer" class="btn next_game fs-3" (click)="nextGame()">
+  Next Game
+</button>

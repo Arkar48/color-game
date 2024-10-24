@@ -1,0 +1,63 @@
+.game-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.097);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 10px;
+  padding: 30px 50px;
+  height: 500px;
+}
+.back {
+  position: absolute;
+  top: 25%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+}
+.question {
+  margin-top: 80px;
+}
+.color-ans {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 5px solid rgba(181, 181, 181, 0.207);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.323);
+  transition: ease-in-out 0.3s;
+}
+.answers {
+  margin-top: 20px;
+}
+.btn {
+  color: rgb(248, 248, 248);
+}
+.game_level {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
+.color-ans:hover {
+  transform: translateY(-10%);
+}
+.answerStatus {
+  height: 50px;
+}
+.next_game {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.go-choose-level {
+  position: absolute;
+  top: 35%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+}
+button {
+  cursor: url(../../../assets/images/cursor.png) !important;
+}

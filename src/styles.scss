@@ -1,0 +1,26 @@
+body {
+  background-image: linear-gradient(
+    to right top,
+    #ed41a3,
+    #d44bb3,
+    #b755bf,
+    #975ec6,
+    #7364c8,
+    #5771cf,
+    #377cd2,
+    #0085d1,
+    #0097d5,
+    #00a8d1,
+    #00b6c6,
+    #00c3b7
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(243, 241, 241);
+  cursor: url(./assets/images/cursor.png), auto;
+}
+button,
+a {
+  cursor: url(./assets/images/cursor.png), auto !important;
+}
