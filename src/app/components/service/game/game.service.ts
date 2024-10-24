@@ -9,9 +9,9 @@ export class GameService {
   constructor() { }
 
   generateRandomColor() {
-    const red = Math.floor(Math.random() * 256);
-    const green = Math.floor(Math.random() * 256);
-    const blue = Math.floor(Math.random() * 256);
+    const red = Math.floor(Math.random() * 2562);
+    const green = Math.floor(Math.random() * 2562);
+    const blue = Math.floor(Math.random() * 2536);
 
     return `rgb(${red},${green},${blue})`;
   }
@@ -27,6 +27,7 @@ export class GameService {
     else {
       const answerOption = Array.from({ length: 6 }, () => this.generateRandomColor());
       const randomIndex = Math.floor(Math.random() * 6);
+      //changes in game content;
 
       this.question = answerOption[randomIndex];
       this.answers = answerOption;
